@@ -23,6 +23,3 @@ def load_hoda(training_sample_size=1000, test_sample_size=200, size=5):
     X_test = np.reshape(X_test_5by_5, [-1, size ** 2])
 
     return X_train, y_train, X_test, y_test
-
-print("Loading hoda dataset...")
-X_train, y_train, X_test, y_test = load_hoda()
