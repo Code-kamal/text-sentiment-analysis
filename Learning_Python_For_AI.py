@@ -690,8 +690,3 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
-
-
-dictionary = {1:2, 3:4, 5:6}
-keys = list(dictionary.keys())
-print(keys.index(1))
