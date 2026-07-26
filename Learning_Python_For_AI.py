@@ -691,4 +691,5 @@ class System:
         sys.exit("Program Ended")
 """
 
-print("Hello Ali")
+def max_value(num1:int, num2:int):
+    return max(num1, num2)
