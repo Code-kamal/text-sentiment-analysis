@@ -691,4 +691,5 @@ class System:
         sys.exit("Program Ended")
 """
 
-print("Hello Ali")
+def welcome(name:str):
+    print("Welcome " + name)
