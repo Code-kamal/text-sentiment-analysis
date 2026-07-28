@@ -690,4 +690,3 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
-print(":)")
