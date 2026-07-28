@@ -690,5 +690,3 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
-
-print("I want to check my account is write or not")
