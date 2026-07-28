@@ -690,6 +690,3 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
-
-def always_true():
-    return true;
