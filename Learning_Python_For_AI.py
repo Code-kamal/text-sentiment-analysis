@@ -690,7 +690,3 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
-
-def print_letters(name:str):
-    for letter in name:
-        print(letter)
