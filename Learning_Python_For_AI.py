@@ -703,8 +703,8 @@ song1 = np.array([0.9, 0.1])
 song2 = np.array([0.85, 0.15])
 song3 = np.array([-0.9, -0.1])
 
-def cosine_similarity(numpy_array1:nd.array, numpy_array2:nd.array):
-    print((numpy_array1 @ numpy_array2) / (np.linalg.norm(numpy_array1, axis=1)*np.linalg.norm(numpy_array2)))
+# def cosine_similarity(numpy_array1:nd.array, numpy_array2:nd.array):
+#    print((numpy_array1 @ numpy_array2) / (np.linalg.norm(numpy_array1, axis=1)*np.linalg.norm(numpy_array2)))
 
 """
 cosine_similarity(song2, song1)
@@ -720,4 +720,12 @@ songs = np.array([
     [1, 4, 2]
 ])
 
-cosine_similarity(songs, song)
+# cosine_similarity(songs, song)
+
+questions = np.array(['Q1','Q2','Q3','Q4','Q5'])
+answers = np.array(['B','D','A','C','B'])
+
+indices = np.random.permutation(len(questions))
+
+print(questions, answers, sep=":")
+print(questions[indices], answers[indices], sep=":")
