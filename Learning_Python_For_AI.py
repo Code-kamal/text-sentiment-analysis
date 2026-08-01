@@ -690,3 +690,11 @@ class System:
     def exit(self):
         sys.exit("Program Ended")
 """
+
+song = np.array([0.7, 0.9, 0.6])
+user_taste = np.array([0.6, 0.8, 0.5])
+
+# print(song * user_taste) # element-wise product
+# print(np.dot(user_taste, song)) # dot product
+# result = "suggested" if np.dot(user_taste,song) + 0.3 > 0 else "not suggested"
+# print(result)
