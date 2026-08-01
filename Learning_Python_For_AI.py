@@ -722,10 +722,17 @@ songs = np.array([
 
 # cosine_similarity(songs, song)
 
-questions = np.array(['Q1','Q2','Q3','Q4','Q5'])
-answers = np.array(['B','D','A','C','B'])
+# questions = np.array(['Q1','Q2','Q3','Q4','Q5'])
+# answers = np.array(['B','D','A','C','B'])
 
-indices = np.random.permutation(len(questions))
+# indices = np.random.permutation(len(questions))
 
-print(questions, answers, sep=":")
-print(questions[indices], answers[indices], sep=":")
+# print(questions, answers, sep=":")
+# print(questions[indices], answers[indices], sep=":")
+
+# questions = np.append(questions, ["Q6", "Q7"])
+# answers = np.append(answers, ["A", "D"])
+# difficulty = np.array([1,2,1,3,2,2,3])
+
+# exam = np.vstack((questions, answers, difficulty)).T
+# print(exam)
