@@ -698,3 +698,26 @@ user_taste = np.array([0.6, 0.8, 0.5])
 # print(np.dot(user_taste, song)) # dot product
 # result = "suggested" if np.dot(user_taste,song) + 0.3 > 0 else "not suggested"
 # print(result)
+
+song1 = np.array([0.9, 0.1])
+song2 = np.array([0.85, 0.15])
+song3 = np.array([-0.9, -0.1])
+
+def cosine_similarity(numpy_array1:nd.array, numpy_array2:nd.array):
+    print((numpy_array1 @ numpy_array2) / (np.linalg.norm(numpy_array1, axis=1)*np.linalg.norm(numpy_array2)))
+
+"""
+cosine_similarity(song2, song1)
+cosine_similarity(song3, song1)
+cosine_similarity(song2, song3)
+"""
+
+songs = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [2, 0, 1],
+    [3, 3, 3],
+    [1, 4, 2]
+])
+
+cosine_similarity(songs, song)
