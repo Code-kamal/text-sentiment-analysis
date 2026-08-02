@@ -769,7 +769,7 @@ cart_prices = np.array([120, 45, 300, 15, 80])
 discount_items = cart_prices[:2].copy()
 discount_items[0] = 0
 print(cart_prices)
-"""
+
 def softmax(x):
     exp_x = np.exp(x - np.max(x, axis=0, keepdims=True))
     return exp_x / np.sum(exp_x, axis=0, keepdims=True)
@@ -784,3 +784,25 @@ for song in x_songs:
     result_layer_2 = layer_2 @ result_layer_1
     result_layer_2 = softmax(result_layer_2)
     print(result_layer_2)
+"""
+
+
+gym_data = np.array([
+    [28, 75, 175, 4],
+    [34, 68, 168, 3],
+    [45, 82, 180, 2],
+    [22, 58, 162, 5],
+    [38, 90, 0, 1],
+    [29, 65, 170, 0]
+])
+
+# ستون ها به ترتیب:
+# ستون 0: سن (سال)
+# ستون 1: وزن (کیلوگرم)
+# ستون 2: قد (سانتی متر)
+# ستون 3: تعداد جلسات در هفته
+member_names = np.array(["Ali", "Sara", "Reza", "Neda", "Hassan", "Maryam"])
+
+# پر کردن عناصری که صفر بودند
+gym_data[[4, 5], [2, 3]] = 178, 7
+# print(gym_data)
