@@ -849,3 +849,13 @@ users = np.array([
 
 normalized_users = (users - np.min(recipes, axis=0)) / (np.max(recipes, axis=0) - np.min(recipes, axis=0))
 # print(normalized_users)
+
+recipes = recipes.reshape(1, 5, 4)
+users = users.reshape(3, 1 , 4)
+
+# print(np.linalg.norm(users - recipes, axis = 2))
+# print(np.linalg.norm(users - recipes, axis = 2).argmin(axis = 1))
+indices = np.linalg.norm(users - recipes, axis = 2).argsort(axis = 1)
+# print(indices)
+recipe_names = np.array(recipe_names)[indices]
+# print(recipe_names)
