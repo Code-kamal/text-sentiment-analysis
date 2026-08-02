@@ -811,3 +811,11 @@ gym_data[[4, 5], [2, 3]] = 178, 7
 # آرایه جدید بر اساس وزن و قد و تعداد جلسات
 edited_gym_data = gym_data[:, 1:]
 # print(edited_gym_data)
+
+# حساب کردن نمره آمادگی جسمانی (BMI + training sessions*2)
+bmi = gym_data[:,1]*10000 / np.square(gym_data[:,2])
+# print(bmi)
+fitness_scores = (bmi + gym_data[:,3]*2).reshape(-1, 1)
+edited_gym_data = np.hstack((gym_data, fitness_scores))
+# print(edited_gym_data)
+
