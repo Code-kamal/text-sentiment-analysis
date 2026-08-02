@@ -859,3 +859,21 @@ indices = np.linalg.norm(users - recipes, axis = 2).argsort(axis = 1)
 # print(indices)
 recipe_names = np.array(recipe_names)[indices]
 # print(recipe_names)
+
+scores = np.array([
+    [18, 15, 20],
+    [12, 14, 16],
+    [20, 19, 18],
+    [10, 8, 15]
+])
+
+scheme_A = np.array([0.5, 0.3, 0.2])
+scheme_B = np.array([0.2, 0.3, 0.5])
+scheme_C = np.array([0.1, 0.2, 0.7])
+
+weight_matrix = np.vstack((scheme_A, scheme_B, scheme_C))
+# print(weight_matrix)
+final_scores = scores @ weight_matrix.T
+# print(final_scores)
+# weighted_names = np.array(["A", "B", "C"])
+# print(weighted_names[np.argmax(final_scores, axis= 1)])
