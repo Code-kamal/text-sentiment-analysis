@@ -838,5 +838,14 @@ recipes = np.array([
 recipe_names = ["Salad", "Curry", "Toast", "Pasta", "Stew"]
 
 # Normalization
-min_max_slicing = (recipes - np.min(recipes, axis= 0)) / (np.max(recipes, axis= 0) - np.min(recipes, axis= 0))
+normalized_recipes = (recipes - np.min(recipes, axis= 0)) / (np.max(recipes, axis= 0) - np.min(recipes, axis= 0))
 # print(min_max_slicing)
+
+users = np.array([
+    [10, 250, 1, 4],
+    [50, 700, 8, 11],
+    [25, 400, 4, 6]
+])
+
+normalized_users = (users - np.min(recipes, axis=0)) / (np.max(recipes, axis=0) - np.min(recipes, axis=0))
+# print(normalized_users)
