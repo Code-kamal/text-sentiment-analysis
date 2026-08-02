@@ -819,3 +819,6 @@ fitness_scores = (bmi + gym_data[:,3]*2).reshape(-1, 1)
 edited_gym_data = np.hstack((gym_data, fitness_scores))
 # print(edited_gym_data)
 
+index = np.argmax(edited_gym_data[:, 4])
+print(member_names[index])
+
