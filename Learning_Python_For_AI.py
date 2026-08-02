@@ -736,3 +736,51 @@ songs = np.array([
 
 # exam = np.vstack((questions, answers, difficulty)).T
 # print(exam)
+
+# camera_frames = np.random.randint(low=0, high=5, size=(4, 6, 3, 3))
+# print(camera_frames)
+# print(camera_frames.reshape(6, -1))
+
+# week_temps = np.random.randint(low=0, high=7, size=(7, 4, 3))
+# print(week_temps)
+# print(week_temps.T.shape)
+
+# confidence = np.array([0.9, 0.4, 0.7, 0.95, 0.3])
+# print(confidence.reshape(5, -1))
+
+# single_command_output = np.array([[[0.1, 0.7, 0.2]]])
+# print(single_command_output.reshape(3).shape)
+# print(single_command_output.reshape(1, -1))
+
+# power_readings = np.array([2.1, -0.5, 3.4, -1.1, 0, 5.6])
+# power_readings[power_readings < 0] = int(0)
+# print(power_readings)
+
+logits = np.array([
+    [2.5, 0.3, 0.1],
+    [0.2, 0.1, 3.5],
+    [1.0, 1.2, 0.9]
+])
+
+# print(np.exp(logits) / np.exp(logits).sum(axis=1).reshape(-1, 1))
+
+"""
+cart_prices = np.array([120, 45, 300, 15, 80])
+discount_items = cart_prices[:2].copy()
+discount_items[0] = 0
+print(cart_prices)
+"""
+def softmax(x):
+    exp_x = np.exp(x - np.max(x, axis=0, keepdims=True))
+    return exp_x / np.sum(exp_x, axis=0, keepdims=True)
+
+x_songs = np.random.randint(low=1, high=11, size=(8, 4))
+
+layer_1 = np.random.rand(5, 4)
+layer_2 = np.random.rand(3, 5)
+for song in x_songs:
+    result_layer_1 = layer_1 @ song
+    result_layer_1 = np.maximum(result_layer_1, 0)
+    result_layer_2 = layer_2 @ result_layer_1
+    result_layer_2 = softmax(result_layer_2)
+    print(result_layer_2)
