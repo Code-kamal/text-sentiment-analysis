@@ -826,3 +826,17 @@ mean = np.mean(edited_gym_data[:, 3])
 z_scores = np.abs((edited_gym_data[:, 3] - mean)/np.std(edited_gym_data[:, 3]))
 index = np.argmax(z_scores)
 # print(member_names[index])
+
+
+recipes = np.array([
+    [15, 350, 2, 5],
+    [45, 600, 7, 10],
+    [10, 200, 0, 3],
+    [30, 450, 5, 7],
+    [60, 800, 8, 12]
+])
+recipe_names = ["Salad", "Curry", "Toast", "Pasta", "Stew"]
+
+# Normalization
+min_max_slicing = (recipes - np.min(recipes, axis= 0)) / (np.max(recipes, axis= 0) - np.min(recipes, axis= 0))
+# print(min_max_slicing)
