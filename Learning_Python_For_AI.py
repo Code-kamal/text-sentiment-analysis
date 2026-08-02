@@ -820,5 +820,9 @@ edited_gym_data = np.hstack((gym_data, fitness_scores))
 # print(edited_gym_data)
 
 index = np.argmax(edited_gym_data[:, 4])
-print(member_names[index])
+# print(member_names[index])
 
+mean = np.mean(edited_gym_data[:, 3])
+z_scores = np.abs((edited_gym_data[:, 3] - mean)/np.std(edited_gym_data[:, 3]))
+index = np.argmax(z_scores)
+# print(member_names[index])
