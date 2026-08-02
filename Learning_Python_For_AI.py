@@ -806,3 +806,8 @@ member_names = np.array(["Ali", "Sara", "Reza", "Neda", "Hassan", "Maryam"])
 # پر کردن عناصری که صفر بودند
 gym_data[[4, 5], [2, 3]] = 178, 7
 # print(gym_data)
+
+
+# آرایه جدید بر اساس وزن و قد و تعداد جلسات
+edited_gym_data = gym_data[:, 1:]
+# print(edited_gym_data)
