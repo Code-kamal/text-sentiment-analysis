@@ -877,3 +877,66 @@ final_scores = scores @ weight_matrix.T
 # print(final_scores)
 # weighted_names = np.array(["A", "B", "C"])
 # print(weighted_names[np.argmax(final_scores, axis= 1)])
+
+# print(np.mean(final_scores, axis = 0).argmax())
+
+# scheme_D = np.array([0.25, 0.25, 0.5])
+# weight_matrix = np.vstack((weight_matrix, scheme_D))
+# print(weight_matrix)
+
+
+def analyze_day(arr:numpy.ndarray):
+    pass
+
+weather_data = np.random.randn(2, 8, 4) * 5 + 20
+day2 = weather_data[1]
+day2.reshape(4, 8)
+analyze_day(day2)
+
+# weather_data = weather_data.flatten()
+# print(weather_data)
+
+"""
+day3 = np.random.randn(8, 4) * 5 + 20
+weather_data = np.concatenate(
+    (weather_data, day3[np.newaxis, :, :]),
+    axis=0
+)
+print(weather_data)
+"""
+
+importance = np.array([3, 8, 1, 9, 4, 7])
+# print(importance.reshape(-1, 1))
+# print(importance[:,np.newaxis])
+
+model_out = np.array([[[0.9]]])
+# print(model_out[0, 0, 0])
+# print(model_out.item(0))
+
+notes = np.array([5, 10, 15, 20, 25])
+pinned = notes[1:3]
+pinned[0] = 999
+# print(notes)
+
+
+bib_numbers = np.array([101, 102, 103, 104, 105, 106])
+times_5k = np.array([22.3, 25.1, 21.8, 26.4, 23.0, 24.7])
+
+# new datas
+bib_numbers_2 = np.array([107, 108])
+times_5k_2 = np.array([20.5, 27.9])
+
+bib_numbers = np.hstack((bib_numbers, bib_numbers_2))
+times_5k = np.hstack((times_5k, times_5k_2))
+# you can also use concatenate
+
+indices = np.random.permutation(times_5k.shape[0])
+# print(bib_numbers[indices], times_5k[indices])
+# you can also use shuffle method
+
+
+final_scores = np.vstack((bib_numbers[np.argsort(times_5k, axis = 0)], times_5k[np.argsort(times_5k, axis = 0)], np.arange(1,len(times_5k)+1))).T
+# print(final_scores)
+
+# print(final_scores[np.where(final_scores == 104)[0][0], 2])
+
