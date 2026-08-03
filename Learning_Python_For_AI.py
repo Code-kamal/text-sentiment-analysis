@@ -940,3 +940,18 @@ final_scores = np.vstack((bib_numbers[np.argsort(times_5k, axis = 0)], times_5k[
 
 # print(final_scores[np.where(final_scores == 104)[0][0], 2])
 
+X_messages = np.array([
+    [12, 0, 1],
+    [45, 5, 8],
+    [8, 0, 0],
+    [30, 3, 4]
+])
+w = np.array([0.1, 0.8, 0.5])
+b = -2.0
+
+output_neuron = X_messages @ w + b
+# print(output_neuron)
+output_neuron = np.maximum(0, output_neuron)
+# print(output_neuron)
+output_neuron = np.where(output_neuron > 5, 1, 0)
+# print(output_neuron)
