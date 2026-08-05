@@ -1025,5 +1025,16 @@ correct_mask = ground_truth == predictions
 # print(predictions[correct_mask])
 # print(len(correct_mask[~correct_mask]))
 
-print(len(correct_mask[correct_mask])/ len(correct_mask))
-print(len(correct_mask[~correct_mask])/ len(correct_mask))
+# print(len(correct_mask[correct_mask])/ len(correct_mask))
+# print(len(correct_mask[~correct_mask])/ len(correct_mask))
+
+y_true = ["Normal"]*950 + ["Urgent"]*50
+# print(len(y_true))
+y_pred = ["Normal"]*1000
+# print(len(y_pred))
+y_true = np.array(y_true)
+y_pred = np.array(y_pred)
+correct_mask1 = y_true == y_pred
+# print(correct_mask1)
+# print(len(correct_mask1[correct_mask1]) / len(y_true))
+# print(1 - (len(correct_mask1[correct_mask1]) / len(y_true)))
