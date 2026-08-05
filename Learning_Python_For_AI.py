@@ -997,3 +997,33 @@ test_set = data_set[valid_set_size + train_set_size:, :]
 # print(training_set[:5])
 # print(validation_set[:5])
 # print(test_set[:5])
+
+ground_truth = np.array([
+ "Normal",
+ "Urgent",
+ "Normal",
+ "Spam",
+ "Urgent",
+ "Normal",
+ "Spam",
+ "Normal"
+])
+
+predictions = np.array([
+ "Normal",
+ "Normal",
+ "Normal",
+ "Spam",
+ "Urgent",
+ "Spam",
+ "Spam",
+ "Normal"
+])
+
+correct_mask = ground_truth == predictions
+# print(len(correct_mask[correct_mask]))
+# print(predictions[correct_mask])
+# print(len(correct_mask[~correct_mask]))
+
+print(len(correct_mask[correct_mask])/ len(correct_mask))
+print(len(correct_mask[~correct_mask])/ len(correct_mask))
