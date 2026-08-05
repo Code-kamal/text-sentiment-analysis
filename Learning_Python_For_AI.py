@@ -976,3 +976,24 @@ test_set = data_set[valid_set_size + train_set_size:, :]
 # print(training_set[:5])
 # print(validation_set[:5])
 # print(test_set[:5])
+
+data_set = np.random.randint(low=0, high=9, size=(12350, 5))
+# print(data_set[:5])
+np.random.shuffle(data_set)
+# print(data_set[:5])
+# print(data_set.shape)
+
+train_set_size = int(data_set.shape[0] * 0.8)
+valid_set_size = int(data_set.shape[0] * 0.1)
+test_set_size = int(data_set.shape[0] * 0.1)
+
+training_set = data_set[:train_set_size, :]
+validation_set = data_set[train_set_size:valid_set_size + train_set_size, :]
+test_set = data_set[valid_set_size + train_set_size:, :]
+
+# print(training_set.shape)
+# print(validation_set.shape)
+# print(test_set.shape)
+# print(training_set[:5])
+# print(validation_set[:5])
+# print(test_set[:5])
