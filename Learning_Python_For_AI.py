@@ -1059,3 +1059,6 @@ predictions = np.array([
 
 mask = (ground_truth == "Healthy") & (predictions == "Malignant")
 # print(len(patient_id[mask]))
+
+mask1 = (ground_truth == "Malignant") & (predictions == "Healthy")
+# print(len(patient_id[mask]))
