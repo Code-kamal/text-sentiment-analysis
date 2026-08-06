@@ -1038,3 +1038,24 @@ correct_mask1 = y_true == y_pred
 # print(correct_mask1)
 # print(len(correct_mask1[correct_mask1]) / len(y_true))
 # print(1 - (len(correct_mask1[correct_mask1]) / len(y_true)))
+
+patient_id = np.array([1, 2, 3, 4, 5])
+ground_truth = np.array([
+ "Healthy",
+ "Malignant",
+ "Healthy",
+ "Healthy",
+ "Malignant"
+])
+
+predictions = np.array([
+ "Healthy",
+ "Malignant",
+ "Malignant",
+ "Healthy",
+ "Healthy"
+])
+
+
+mask = (ground_truth == "Healthy") & (predictions == "Malignant")
+# print(len(patient_id[mask]))
