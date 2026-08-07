@@ -1167,3 +1167,38 @@ X_email = np.array([feature_1, feature_2, feature_3, feature_4]).T
 # feature_2: shows is there refund word in every email
 # feature_3: shows how many ! are there in every email
 #feature_4: shows count of word in every email
+
+predicted_labels = np.array([])
+for x_email in X_email:
+    if x_email[0] == 1 or x_email[1] == 1 or x_email[2] >= 3:
+        predicted_labels = np.append(predicted_labels, "Urgent")
+    else:
+        predicted_labels = np.append(predicted_labels, "Normal")
+
+# print(predicted_labels)
+
+mask = predicted_labels == labels
+# print(mask)
+
+accuracy = mask.sum() / mask.size
+# print(accuracy)
+
+error = 1 - accuracy
+
+X = np.array([1, 2, 3, 4, 5])
+y = np.array([3, 6, 9, 12, 15])
+
+candidate_w = np.array([1, 2, 2.5, 3, 3.5, 4])
+
+candidate_w = candidate_w.reshape(-1, 1)
+
+predictions = X * candidate_w
+# print(predictions)
+
+MSE = np.mean((predictions - y)**2 , axis = 1)
+# print(MSE)
+
+mse_min = np.min(MSE)
+# print(mse_min)
+
+# print(candidate_w[np.argmin(MSE)])
