@@ -1062,3 +1062,34 @@ mask = (ground_truth == "Healthy") & (predictions == "Malignant")
 
 mask1 = (ground_truth == "Malignant") & (predictions == "Healthy")
 # print(len(patient_id[mask]))
+
+email_id = np.array([1, 2, 3, 4, 5])
+
+ground_truth = np.array([
+ "Not Spam",
+ "Spam",
+ "Not Spam",
+ "Not Spam",
+ "Spam"
+])
+
+predictions = np.array([
+ "Not Spam",
+ "Spam",
+ "Spam",
+ "Not Spam",
+ "Not Spam"
+])
+
+mask = ground_truth == predictions
+# print(len(mask[mask])/ len(mask))
+# print(1 - len(mask[mask])/ len(mask))
+
+study_hours = np.array([1, 2, 3, 5, 7, 8])
+gaming_hours = np.array([6, 5, 4, 3, 2, 1])
+actual_scores = np.array([35, 40, 50, 68, 82, 90])
+weight1 = 8
+weight2 = -3
+bias = 45
+
+predicted_scores = study_hours*weight1 + gaming_hours*weight2 + bias
