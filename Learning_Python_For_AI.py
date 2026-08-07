@@ -1097,3 +1097,5 @@ predicted_scores = study_hours*weight1 + gaming_hours*weight2 + bias
 
 predicted_scores = np.clip(predicted_scores, a_min=0, a_max=100)
 # print(predicted_scores)
+
+error = predicted_scores - actual_scores
