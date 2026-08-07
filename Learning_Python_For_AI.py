@@ -1108,3 +1108,15 @@ candidate_weight1 = np.array([2, 4, 6, 8, 10, 12]).reshape(-1, 1)
 
 predicted_scores_2 = np.clip(study_hours*candidate_weight1 + gaming_hours*weight2 + bias,0 ,100)
 # print(predicted_scores_2)
+
+MAE2 = np.mean(predicted_scores_2, axis = 0)
+# print(MAE2)
+
+min_mae2 = np.min(MAE2)
+# print(min_mae2)
+
+error_2 = predicted_scores_2 - actual_scores
+# print(error_2)
+
+best_weight = np.argmin(np.sum(np.abs(error_2), axis = 1))
+# print("best_weight: ", candidate_weight1[best_weight])
