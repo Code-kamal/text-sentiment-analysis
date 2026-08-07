@@ -1120,3 +1120,47 @@ error_2 = predicted_scores_2 - actual_scores
 
 best_weight = np.argmin(np.sum(np.abs(error_2), axis = 1))
 # print("best_weight: ", candidate_weight1[best_weight])
+
+emails = np.array([
+ "URGENT reset my password now!!!",
+ "hello I have a question about my invoice",
+ "refund refund refund this is unacceptable!!!",
+ "please cancel my subscription",
+ "thank you for your help",
+ "URGENT billing error please help!!!"
+])
+
+labels = np.array([
+ "Urgent",
+ "Normal",
+ "Urgent",
+ "Normal",
+ "Normal",
+ "Urgent"
+])
+
+feature_1 = np.array([])
+feature_2 = np.array([])
+feature_3 = np.array([])
+feature_4 = np.array([])
+
+for email in emails:
+
+    if "urgent" in email.lower():
+        feature_1 = np.append(feature_1, 1)
+    else:
+        feature_1 = np.append(feature_1, 0)
+
+    if "refund" in email.lower():
+        feature_2 = np.append(feature_2, 1)
+    else:
+        feature_2 = np.append(feature_2, 0)
+
+    counter = email.count("!")
+    feature_3 = np.append(feature_3, counter)
+
+    feature_4 = np.append(feature_4, len(email.split()))
+
+X_email = np.array([feature_1, feature_2, feature_3, feature_4]).T
+# print(X_email)
+
