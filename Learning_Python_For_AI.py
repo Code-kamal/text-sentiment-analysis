@@ -1202,3 +1202,13 @@ mse_min = np.min(MSE)
 # print(mse_min)
 
 # print(candidate_w[np.argmin(MSE)])
+
+epochs = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+train_accuracy = np.array([0.55, 0.63, 0.70, 0.78, 0.85, 0.90, 0.94, 0.97, 0.99, 1.00])
+validation_accuracy = np.array([0.52, 0.60, 0.68, 0.75, 0.82, 0.84, 0.83, 0.79, 0.74,
+0.70])
+
+# print(epochs[np.argmax(validation_accuracy)])
+
+# print(validation_accuracy[np.argmax(validation_accuracy)], train_accuracy[np.argmax(validation_accuracy)])
+
