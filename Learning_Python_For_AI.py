@@ -1164,3 +1164,6 @@ for email in emails:
 X_email = np.array([feature_1, feature_2, feature_3, feature_4]).T
 # print(X_email)
 
+# feature_2: shows is there refund word in every email
+# feature_3: shows how many ! are there in every email
+#feature_4: shows count of word in every email
