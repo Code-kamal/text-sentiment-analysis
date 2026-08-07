@@ -1103,3 +1103,8 @@ error = predicted_scores - actual_scores
 absolute_error = np.abs(error)
 
 MAE = np.mean(absolute_error)
+
+candidate_weight1 = np.array([2, 4, 6, 8, 10, 12]).reshape(-1, 1)
+
+predicted_scores_2 = np.clip(study_hours*candidate_weight1 + gaming_hours*weight2 + bias,0 ,100)
+# print(predicted_scores_2)
