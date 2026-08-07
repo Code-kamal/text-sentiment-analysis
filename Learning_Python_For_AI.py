@@ -1101,3 +1101,5 @@ predicted_scores = np.clip(predicted_scores, a_min=0, a_max=100)
 error = predicted_scores - actual_scores
 
 absolute_error = np.abs(error)
+
+MAE = np.mean(absolute_error)
