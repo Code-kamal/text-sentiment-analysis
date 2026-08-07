@@ -1093,3 +1093,7 @@ weight2 = -3
 bias = 45
 
 predicted_scores = study_hours*weight1 + gaming_hours*weight2 + bias
+# print(predicted_scores)
+
+predicted_scores = np.clip(predicted_scores, a_min=0, a_max=100)
+# print(predicted_scores)
