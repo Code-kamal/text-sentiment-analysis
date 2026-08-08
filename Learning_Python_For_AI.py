@@ -6,6 +6,7 @@ import datetime as dt
 from csv import excel_tab
 import random as rnd
 import numpy as np
+import pandas as pd
 
 # grades = [10, 11 , 11, 12,14, 15, 16, 17, 18, 19, 19,19, 20]
 
@@ -1231,3 +1232,6 @@ gap = test_error - train_error
 
 # for good fit
 # print(np.min(gap))
+
+df = pd.read_csv("used_car.csv")
+print(df.head())
