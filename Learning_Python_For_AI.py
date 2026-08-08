@@ -1212,3 +1212,22 @@ validation_accuracy = np.array([0.52, 0.60, 0.68, 0.75, 0.82, 0.84, 0.83, 0.79, 
 
 # print(validation_accuracy[np.argmax(validation_accuracy)], train_accuracy[np.argmax(validation_accuracy)])
 
+
+models = np.array(["Model A", "Model B", "Model C"])
+train_error = np.array([0.35, 0.08, 0.01])
+test_error = np.array([0.38, 0.10, 0.35])
+
+gap = test_error - train_error
+# print(gap)
+
+# print(models[np.argmax(train_error)])
+# print(models[np.argmax(test_error)])
+
+# for overfitting
+# print(np.max(gap))
+
+# for underfitting
+# print(np.max(train_error + test_error))
+
+# for good fit
+# print(np.min(gap))
