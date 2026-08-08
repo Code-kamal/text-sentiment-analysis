@@ -1234,4 +1234,7 @@ gap = test_error - train_error
 # print(np.min(gap))
 
 df = pd.read_csv("used_car.csv")
-print(df.head())
+# print(df.head())
+# print(type(df))
+# print(df.info())
+# print(df.describe())
