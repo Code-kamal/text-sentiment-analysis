@@ -1244,3 +1244,11 @@ df = pd.read_csv("used_car.csv")
 # plt.ylabel("Frequency")
 # plt.title("Distribution of car prices")
 # plt.show()
+
+df["FuelType"].value_counts().plot(kind="bar")
+
+plt.xlabel("Fuel Type")
+plt.ylabel("Count")
+plt.title("Number of Cars by Fuel Type")
+
+plt.show()
