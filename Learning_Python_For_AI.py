@@ -1245,10 +1245,25 @@ df = pd.read_csv("used_car.csv")
 # plt.title("Distribution of car prices")
 # plt.show()
 
-df["FuelType"].value_counts().plot(kind="bar")
+# df["FuelType"].value_counts().plot(kind="bar")
+# plt.xlabel("Fuel Type")
+# plt.ylabel("Count")
+# plt.title("Number of Cars by Fuel Type")
+# plt.show()
 
-plt.xlabel("Fuel Type")
-plt.ylabel("Count")
-plt.title("Number of Cars by Fuel Type")
+# Generate random data
+np.random.seed(42)
 
+normal_data = np.random.normal(
+    loc= 170,
+    scale = 5,
+    size= 5000
+)
+
+plt.figure(figsize = (7, 4))
+plt.hist(normal_data, bins= 50)
+
+plt.title("Normal Distribution")
+plt.xlabel("value")
+plt.ylabel("Frequency")
 plt.show()
