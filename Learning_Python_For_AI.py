@@ -1,4 +1,4 @@
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import string
 import sys
 import time
@@ -1238,3 +1238,9 @@ df = pd.read_csv("used_car.csv")
 # print(type(df))
 # print(df.info())
 # print(df.describe())
+
+# plt.hist(df["AskPrice"], bins = 20)
+# plt.xlabel("Ask Price")
+# plt.ylabel("Frequency")
+# plt.title("Distribution of car prices")
+# plt.show()
